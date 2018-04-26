@@ -35,8 +35,12 @@ class Spree::BlogEntry < ActiveRecord::Base
       date = DateTime.new(*keys.reverse.map {|key| date[key].to_i })
     end
 
+<<<<<<< HEAD
     time = date.to_time
     where(:published_at => (time.send("beginning_of_#{period}")..time.send("end_of_#{period}")) )
+=======
+   
+>>>>>>> f31f0cec5a4f5a475cad800243f98d4d03b32866
   end
 
   def self.by_tag(tag_name)
